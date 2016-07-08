@@ -1,0 +1,43 @@
+<style media="screen">
+body {
+    background-color: #888a85;
+}
+.login {
+      background: #d3d7cf;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%)
+}
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+</style>
+
+<div class="container text-center">
+  <div class="login well">
+    <img src="/assets/logo.png" alt="logan coach logo"/>
+    <form class="form-signin" ng-submit="login(username, password)">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon glyphicon glyphicon-log-in" aria-hidden="true"></span>
+          <input type="text" class="form-control" ng-change="error=false" placeholder="Username" required autofocus ng-model="username">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon glyphicon glyphicon-lock" aria-hidden="true"></span>
+          <input type="password" ng-change="error=false" class="form-control" placeholder="Password" required ng-model="password">
+        </div>
+      </div>
+      <br>
+      <alert class="alert-danger" ng-if="error">There was a problem loggin in, please try again</alert>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+    </form>
+  </div>
+
+</div>

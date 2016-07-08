@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html id="loganCoachApp" ng-app="lcApp" ng-cloak>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Logan Coach</title>
+        <!-- CSS -->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- JS -->
+        <script src="bower_components/jquery/jquery.min.js"></script>
+        <script src="bower_components/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/angular-ui-sortable/sortable.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <script src="js/services/authService.js"></script>
+        <script src="js/services/categoryService.js"></script>
+        <script src="js/services/errorService.js"></script>
+        <script src="js/services/estimateService.js"></script>
+        <script src="js/services/itemService.js"></script>
+        <script src="js/services/orderService.js"></script>
+        <script src="js/services/trailerConfigService.js"></script>
+        <script src="js/services/trailerService.js"></script>
+        <script src="js/services/userService.js"></script>
+
+        <script src="js/controllers/signinController.js"></script>
+
+        <script src="js/controllers/admin/itemController.js"></script>
+        <script src="js/controllers/admin/trailerConfigController.js"></script>
+        <script src="js/controllers/admin/trailerController.js"></script>
+        <script src="js/controllers/admin/userController.js"></script>
+        <script src="js/controllers/admin/orderstatusController.js"></script>
+
+        <script src="js/controllers/dealer/estimateConfigController.js"></script>
+        <script src="js/controllers/dealer/estimateController.js"></script>
+        <script src="js/controllers/dealer/historyController.js"></script>
+
+        <script src="js/controllers/modal/confirmModalController.js"></script>
+        <script src="js/controllers/modal/exclusionsModalController.js"></script>
+        <script src="js/controllers/modal/copyModalController.js"></script>
+        <!-- there used to be an empty file for orderconfirmmodalcontroller... -->
+    </head>
+
+<!-- TODO: why does this not include the navbar? every other page does, when this could be the only one and should be -->
+    <body>
+        <div class="view-container">
+            <div ng-view class="view-frame animate-repeat"></div>
+        </div>
+    </body>
+</html>
